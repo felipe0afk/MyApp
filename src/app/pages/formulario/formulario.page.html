@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar class="toolbar-personalizado">
+    <div class="logo-contenedor">
+      <img src="assets/img/logo-travel2.png" alt="TravelGo Logo" class="header-logo2" />
+      <ion-title class="titulo-home">TravelGo</ion-title>
+    </div>
+
+<ion-buttons slot="end" class="menu-botones">
+  <ion-button routerLink="/home" routerDirection="forward" routerLinkActive="activo">Inicio</ion-button>
+  <ion-button routerLink="/about" routerDirection="forward" routerLinkActive="activo">Acerca de</ion-button>
+  <ion-button routerLink="/formulario" routerDirection="forward" routerLinkActive="activo">Contacto</ion-button>
+</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Campo Nombre -->
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="usuario.nombre"></ion-input>
+  </ion-item>
+
+  <!-- Campo Correo -->
+  <ion-item>
+    <ion-label position="floating">Correo Electrónico</ion-label>
+    <ion-input type="email" [(ngModel)]="usuario.correo"></ion-input>
+  </ion-item>
+
+  <!-- Campo Mensaje -->
+  <ion-item>
+    <ion-label position="floating">Mensaje</ion-label>
+    <ion-textarea autoGrow="true" [(ngModel)]="usuario.mensaje"></ion-textarea>
+  </ion-item>
+
+  <!-- Botón Enviar -->
+  <ion-button class="button-inner" expand="block" (click)="enviarFormulario()">
+    Enviar
+  </ion-button>
+
+  <!-- Mostrar datos enviados -->
+  <ion-card *ngIf="datosEnviados" color="light">
+    <ion-card-header>
+      <ion-card-title>Datos Enviados</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+      <p><strong>Correo:</strong> {{ usuario.correo }}</p>
+      <p><strong>Mensaje:</strong> {{ usuario.mensaje }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Footer ahora como parte del contenido -->
+  <app-footer></app-footer>
+
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar class="toolbar-personalizado">
+    <div class="logo-contenedor">
+      <img src="assets/img/logo-travel2.png" alt="TravelGo Logo" class="header-logo2" />
+      <ion-title class="titulo-home">TravelGo</ion-title>
+    </div>
+
+<ion-buttons slot="end" class="menu-botones">
+  <ion-button routerLink="/home" routerDirection="forward" routerLinkActive="activo">Inicio</ion-button>
+  <ion-button routerLink="/about" routerDirection="forward" routerLinkActive="activo">Acerca de</ion-button>
+  <ion-button routerLink="/formulario" routerDirection="forward" routerLinkActive="activo">Contacto</ion-button>
+</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: var(--color-blanco-perla);">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sobre Nuestra App</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        TravelGo es una aplicación pensada para los amantes de los viajes.
+        Te ayuda a planificar tus rutas, encontrar hospedaje, descubrir
+        atracciones turísticas y mucho más, todo desde la comodidad de tu móvil.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nuestro Equipo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let miembro of [
+            {nombre: 'Felipe Espinosa', rol: 'Desarrollador Frontend', foto: 'assets/img/user1.jpg'},
+            {nombre: 'Felipe Espinosa', rol: 'Diseñador UX/UI', foto: 'assets/img/user1.jpg'},
+            {nombre: 'Felipe Espinosa', rol: 'Desarrollador Backend', foto: 'assets/img/user1.jpg'},
+            {nombre: 'Felipe Espinosa', rol: 'Gestor de Proyecto', foto: 'assets/img/user1.jpg'}
+          ]">
+            <ion-card>
+              <img [src]="miembro.foto" alt="{{miembro.nombre}}" />
+              <ion-card-header>
+                <ion-card-title>{{ miembro.nombre }}</ion-card-title>
+                <ion-card-subtitle>{{ miembro.rol }}</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <app-footer></app-footer>
+</ion-content>

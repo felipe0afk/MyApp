@@ -1,0 +1,130 @@
+/* Toolbar estilo igual que "Acerca de" */
+ion-toolbar {
+  background-color: var(--color-blanco-perla);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ion-title {
+  color: var(--color-azul-marino);
+  font-weight: 700;
+}
+
+ion-buttons ion-button {
+  --color: var(--color-azul-marino);
+  font-weight: 500;
+}
+
+/* ion-content fondo blanco perla */
+ion-content {
+  background-color: var(--color-blanco-perla);
+}
+
+/* ion-item (inputs) estilo con borde dorado suave y fondo beige arena */
+ion-item {
+  --background: var(--color-beige-arena);
+  --border-color: var(--color-dorado-suave);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 2px solid var(--color-dorado-suave);
+}
+
+/* Labels azul marino */
+ion-label {
+  color: var(--color-blanco-perla);
+  font-weight: 600;
+}
+
+/* Inputs y textarea texto azul marino */
+ion-input, ion-textarea {
+  color: var(--color-blanco-perla);
+  font-weight: 500;
+}
+
+/* Botón enviar: fondo dorado suave, texto blanco perla */
+ion-button.button-inner {
+  --background: var(--color-beige-arena);
+  --background-hover: #c19f2f;
+  --background-activated: #b8891f;
+  --color: var(--color-blanco-perla);
+  font-weight: 700;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 8px rgba(212, 175, 55, 0.4);
+    border: 2px solid var(--color-dorado-suave);
+margin-bottom: 120px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tarjeta datos enviados */
+ion-card[color="light"] {
+  background-color: var(--color-beige-arena);
+  border: 2px solid var(--color-dorado-suave);
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+  color: var(--color-blanco-perla);
+}
+
+/* Títulos dentro de la tarjeta */
+ion-card-title {
+  color: var(--color-blanco-perla);
+  font-weight: 700;
+}
+
+/* Texto normal dentro de ion-card-content */
+ion-card-content p {
+  color: #333;
+}
+.item-inner {
+border-radius: 20px;
+}
+
+
+
+:host {
+  --color-blanco-perla: #f8f8f8;
+  --color-dorado-suave: #d4af37;
+  --color-blanco-perla: #f8f8f8;
+  --color-beige-arena: #f5deb3;
+}
+
+.toolbar-personalizado {
+  background-color: var(--color-blanco-perla);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-home {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00A6A6;
+  margin-left: 10px;
+}
+
+.header-logo2 {
+  height: 40px;
+  margin-left: 40px;
+}
+
+.menu-botones ion-button {
+  --color: #00A6A6;
+  font-weight: 500;
+}
+.menu-botones ion-button.activo {
+  border-bottom: 3px solid #00A6A6;
+  border-radius: 0;
+}
+.menu-botones ion-button {
+  transition: border-bottom 0.3s ease;
+  margin-right: 40px;
+}

@@ -1,0 +1,125 @@
+# Documentación técnica
+
+Este documento proporciona documentación técnica para el proyecto Ionic.
+
+## Configuración del proyecto
+
+Para configurar el proyecto localmente, asegúrese de tener instalado Node.js y la CLI de Ionic.
+
+1.  **Clone el repositorio:**
+
+
+```
+bash
+    git clone <repository_url>
+    
+```
+2.  **Navegue hasta el directorio del proyecto:* *
+```
+bash
+    cd <directorio_del_proyecto>
+    
+```
+3.  **Instale las dependencias:**
+
+    
+```
+bash
+    npm install
+    
+```
+## Estructura del proyecto
+
+El proyecto sigue una estructura estándar de Ionic. Los directorios y archivos clave incluyen:
+
+*   `.vscode/`: contiene la configuración específica de Visual Studio Code.
+    *   `extensions.json`: extensiones recomendadas de VS Code.
+    *   `settings.json`: configuración del espacio de trabajo para VS Code.
+*   `angular.json`: archivo de configuración de Angular CLI.
+*   `capacitor.config.ts`: archivo de configuración de Capacitor para compilaciones nativas.
+*   `ionic.config.json`: archivo de configuración de Ionic CLI.
+* `karma.conf.js`: archivo de configuración para el ejecutor de pruebas Karma.
+* `package-lock.json`: registra las versiones exactas de las dependencias utilizadas.
+* `package.json`: enumera las dependencias del proyecto y los scripts disponibles.
+* `README.md`: descripción general del proyecto e instrucciones de configuración.
+* `src/`: contiene el código fuente de la aplicación.
+* `app/`: lógica central de la aplicación.
+        - `app.component.html`, `app.component.scss`, `app.component.spec.ts`, `app.component.ts`: Componente raíz de la aplicación.
+- `app.routes.ts`: Define las rutas de la aplicación.
+- `components/`: Contiene componentes de interfaz de usuario reutilizables.
+- `footer/`: Archivos de componentes del pie de página.
+                * `footer.component.html`, `footer.component.scss`, `footer.component.spec.ts`, `footer.component.ts`
+* `navbar/`: Archivos del componente de la barra de navegación.
+* `navbar.component.html`, `navbar.component.scss`, `navbar.component.spec.ts`, `navbar.component.ts`
+        * `home/`: Archivos de la página de inicio.
+* `home.page.html`, `home.page.scss`, `home.page.spec.ts`, `home.page.ts`
+* `pages/`: Contiene páginas individuales de la aplicación.
+* `about/`: Archivos de la página «Acerca de».
+                *   `about.page.html`, `about.page.scss`, `about.page.spec.ts`, `about.page.ts`
+*   `formulario/`: Archivos de la página Formulario.
+*   `formulario.page.html`, `formulario.page.scss`, `formulario.page.spec.ts`, `formulario.page.ts`
+    * `assets/`: Contiene activos estáticos como imágenes, iconos y fuentes.
+* `icon/`: Iconos de la aplicación.
+* `img/`: Archivos de imagen.
+* `environments/`: Contiene archivos de configuración específicos del entorno.
+* `environment.prod.ts`: Configuración del entorno de producción.
+* `environment.ts`: Configuración del entorno de desarrollo.
+*   `theme/`: Contiene variables y definiciones de estilo globales.
+*   `variables.scss`: Variables Sass para el estilo.
+*   `global.scss`: Estilos globales de la aplicación.
+*   `index.html`: El archivo HTML principal de la aplicación.
+*   `main.ts`: El punto de entrada de la aplicación.
+*   `polyfills.ts`: Importa los polyfills necesarios para Angular.
+    * `test.ts`: Punto de entrada para las pruebas de Karma.
+* `zone-flags.ts`: Configuración para Zone.js.
+* `tsconfig.app.json`, `tsconfig.json`, `tsconfig.spec.json`: Archivos de configuración de TypeScript.
+
+## Scripts disponibles
+
+El archivo `package.json` contiene varios scripts para tareas de desarrollo comunes:
+
+*   `npm start`: Inicia el servidor de desarrollo y sirve la aplicación en el navegador.
+*   `npm run build`: Compila la aplicación para producción.
+*   `npm test`: Ejecuta las pruebas unitarias utilizando Karma.
+*   `npm run lint`: Comprueba los archivos del proyecto para aplicar el estilo de código e identificar posibles problemas.
+*   `npm run e2e`: Ejecuta las pruebas de extremo a extremo.
+
+Puedes ejecutar estos scripts desde tu terminal en el directorio raíz del proyecto.
+
+## Componentes
+
+Los componentes son bloques de construcción reutilizables para la interfaz de usuario. Este proyecto incluye:
+
+* `footer`: un componente para el pie de página de la aplicación.
+* `navbar`: un componente para la barra de navegación de la aplicación.
+
+Cada componente suele tener:
+
+* Archivo `.html`: define la plantilla del componente.
+*   Archivo `.scss`: contiene los estilos específicos del componente.
+*   Archivo `.spec.ts`: contiene pruebas unitarias para el componente.
+*   Archivo `.ts`: contiene la lógica del componente (clase TypeScript).
+
+## Páginas
+
+Las páginas representan pantallas o vistas individuales en la aplicación. Este proyecto incluye:
+
+*   `home`: la página de inicio principal.
+*   `about`: Una página que proporciona información sobre el proyecto o la organización.
+*   `formulario`: Una página para un formulario.
+
+Al igual que los componentes, cada página tiene:
+
+*   Archivo `.html`: Define la plantilla de la página.
+*   Archivo `.scss`: Contiene los estilos específicos de la página.
+*   Archivo `.spec.ts`: Contiene pruebas unitarias para la página.
+* Archivo `.ts`: contiene la lógica de la página (clase TypeScript).
+## Estilo
+
+El proyecto utiliza Scss para el estilo.
+
+*   `src/theme/variables.scss`: Este archivo contiene variables Sass globales que se pueden utilizar en todo el proyecto para mantener la coherencia en el estilo.
+*   `src/global.scss`: Este archivo contiene estilos globales que se aplican a toda la aplicación.
+*   Los componentes y páginas individuales tienen sus propios archivos `.scss` para el estilo específico de cada componente.
+
+Ionic proporciona un conjunto de estilos y componentes predeterminados. Puede personalizar la apariencia sobrescribiendo las variables predeterminadas en `src/theme/variables.scss` y añadiendo estilos personalizados en los archivos Sass globales o específicos de cada componente.

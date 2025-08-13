@@ -1,0 +1,70 @@
+├── .vscode
+│   ├── extensions.json
+│   └── settings.json
+├── angular.json
+├── capacitor.config.ts
+├── ionic.config.json
+├── karma.conf.js
+├── package-lock.json
+├── package.json
+├── README.md
+├── src
+│   ├── app
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   └── app.routes.ts
+│   │   ├── components
+│   │   │   ├── footer
+│   │   │   │   ├── footer.component.html
+│   │   │   │   ├── footer.component.scss
+│   │   │   │   ├── footer.component.spec.ts
+│   │   │   │   └── footer.component.ts
+│   │   │   └── navbar
+│   │   │   │   ├── navbar.component.html
+│   │   │   │   ├── navbar.component.scss
+│   │   │   │   ├── navbar.component.spec.ts
+│   │   │   │   └── navbar.component.ts
+│   │   ├── home
+│   │   │   ├── home.page.html
+│   │   │   ├── home.page.scss
+│   │   │   ├── home.page.spec.ts
+│   │   │   └── home.page.ts
+│   │   └── pages
+│   │       ├── about
+│   │       │   ├── about.page.html
+│   │       │   ├── about.page.scss
+│   │       │   ├── about.page.spec.ts
+│   │       │   └── about.page.ts
+│   │       └── formulario
+│   │           ├── formulario.page.html
+│   │           ├── formulario.page.scss
+│   │           ├── formulario.page.spec.ts
+│   │           └── formulario.page.ts
+│   ├── assets
+│   │   ├── icon
+│   │   │   └── favicon.png
+│   │   ├── img
+│   │   │   ├── australia.jpg
+│   │   │   ├── colombia.jpg
+│   │   │   ├── egipto.jpg
+│   │   │   ├── italia.jpg
+│   │   │   ├── japon.jpg
+│   │   │   ├── logo-travel.png
+│   │   │   └── logo-travel2.png
+│   │   └── shapes.svg
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── theme
+│   │   └── variables.scss
+│   ├── global.scss
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── test.ts
+│   └── zone-flags.ts
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json
